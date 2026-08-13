@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Психологическая антихрупкость — практикум Вячеслава Козлова</title>
+<meta name="description" content="Авторская система из 13 принципов: как расти через стресс и кризисы. Практикум «Возвращение», мастер-классы и бесплатные эфиры психолога Вячеслава Козлова.">
+<meta property="og:title" content="Психологическая антихрупкость — практикум Вячеслава Козлова">
+<meta property="og:description" content="Как перестать ходить по кругу и вернуть управление своей жизнью. 13 принципов антихрупкости.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#E8590C;
+  --orange-h:#FF7A1A;
+  --brown:#8B4513;
+  --graphite:#1A1A1A;
+  --gray:#6B6B6B;
+  --light:#F5F5F3;
+  --white:#FFFFFF;
+  --maxw:1140px;
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,Arial,sans-serif;color:var(--graphite);line-height:1.6;background:var(--white)}
+h1,h2,h3,h4{font-family:'Montserrat',system-ui,Arial,sans-serif;color:var(--graphite);line-height:1.2;font-weight:700}
+p{color:#333}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+section.alt{background:var(--light)}
+.eyebrow{display:inline-block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-bottom:16px}
+.section-title{font-size:34px;margin-bottom:14px}
+.section-sub{font-size:18px;color:var(--gray);max-width:720px;margin-bottom:44px}
+/* buttons */
+.btn{display:inline-block;background:var(--orange);color:#fff;font-weight:600;font-size:16px;padding:16px 30px;border-radius:12px;border:none;cursor:pointer;transition:.2s;text-align:center}
+.btn:hover{background:var(--orange-h);transform:translateY(-2px)}
+.btn-outline{display:inline-block;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);font-weight:600;font-size:16px;padding:16px 30px;border-radius:12px;transition:.2s}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-dark-outline{color:var(--graphite);border-color:rgba(26,26,26,.25)}
+.btn-dark-outline:hover{border-color:var(--graphite);background:rgba(26,26,26,.04)}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Montserrat';font-weight:800;font-size:18px}
+.logo span{color:var(--orange)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:15px;color:#333;font-weight:500}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{background:var(--orange);color:#fff;padding:10px 20px;border-radius:10px;font-weight:600}
+.nav-cta:hover{background:var(--orange-h);color:#fff}
+.burger{display:none;font-size:26px;background:none;border:none;cursor:pointer}
+/* hero */
+.hero{background:radial-gradient(1200px 600px at 70% -10%,rgba(232,89,12,.28),transparent 60%),linear-gradient(160deg,#1A1A1A 0%,#25211d 100%);color:#fff;padding:120px 0 110px}
+.hero h1{color:#fff;font-size:52px;font-weight:800;max-width:900px;letter-spacing:-.5px}
+.hero .lead{font-size:20px;color:#d9d5d0;max-width:680px;margin:26px 0 40px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.hero-meta{margin-top:38px;display:flex;gap:34px;flex-wrap:wrap;color:#b8b3ad;font-size:15px}
+.hero-meta b{color:var(--orange-h);font-family:'Montserrat';font-size:22px;display:block}
+/* grids */
+.grid{display:grid;gap:24px}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid #ececec;border-radius:var(--radius);padding:30px;transition:.2s;height:100%}
+.card:hover{box-shadow:0 12px 30px rgba(0,0,0,.07);transform:translateY(-3px)}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{font-size:15px;color:var(--gray)}
+.card .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;background:var(--orange);color:#fff;font-weight:700;font-family:'Montserrat';margin-bottom:14px;font-size:15px}
+/* module */
+.module{margin-bottom:34px}
+.module-head{display:flex;align-items:baseline;gap:14px;margin-bottom:18px}
+.module-head .mtag{background:var(--graphite);color:#fff;font-family:'Montserrat';font-weight:700;font-size:13px;padding:6px 12px;border-radius:8px;white-space:nowrap}
+.module-head h3{font-size:22px}
+.module-head .mdesc{color:var(--gray);font-size:15px}
+/* author */
+.author-wrap{display:grid;grid-template-columns:280px 1fr;gap:44px;align-items:center}
+.avatar{width:240px;height:280px;border-radius:20px;background:linear-gradient(160deg,#8B4513,#1A1A1A);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Montserrat';font-weight:800;font-size:64px;box-shadow:0 18px 40px rgba(0,0,0,.15)}
+.author-info h2{font-size:32px;margin-bottom:6px}
+.author-role{color:var(--orange);font-weight:600;margin-bottom:18px}
+.socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.socials a{border:1px solid #ddd;border-radius:10px;padding:9px 16px;font-size:14px;font-weight:600;color:#333;transition:.2s}
+.socials a:hover{border-color:var(--orange);color:var(--orange)}
+/* practicum */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.feature-list{list-style:none;margin:18px 0}
+.feature-list li{padding-left:30px;position:relative;margin-bottom:12px;font-size:16px}
+.feature-list li:before{content:'';position:absolute;left:0;top:9px;width:12px;height:12px;border-radius:50%;background:var(--orange)}
+.pricecard{background:#fff;border:1px solid #ececec;border-radius:var(--radius);padding:32px}
+.pricecard .free{display:inline-block;background:#e9f7ec;color:#1b7a37;font-weight:700;padding:8px 16px;border-radius:30px;font-size:14px;margin-bottom:18px}
+.pricecard .meta{font-size:15px;color:var(--gray);margin-bottom:8px}
+.pricecard .meta b{color:var(--graphite)}
+.ph{background:#fff3ea;color:var(--orange);padding:0 6px;border-radius:4px;font-weight:600}
+/* video */
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.video-card{background:#fff;border:1px solid #ececec;border-radius:var(--radius);overflow:hidden}
+.video-embed{position:relative;padding-bottom:56.25%;background:#111}
+.video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-card .vc-body{padding:16px 18px}
+.video-card h4{font-size:16px}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:44px}
+.stat{background:var(--graphite);color:#fff;border-radius:var(--radius);padding:30px;text-align:center}
+.stat b{display:block;font-family:'Montserrat';font-size:44px;color:var(--orange-h);line-height:1}
+.stat span{font-size:15px;color:#c9c4be;margin-top:8px;display:block}
+/* reviews */
+.review{background:#fff;border:1px solid #ececec;border-radius:var(--radius);padding:28px;height:100%}
+.review p{font-size:16px;font-style:italic;color:#2b2b2b;margin-bottom:18px}
+.review .who{font-weight:700;font-family:'Montserrat';font-size:15px}
+.review .who span{display:block;font-family:'Inter';font-weight:400;color:var(--gray);font-size:14px}
+.disclaimer{font-size:13px;color:var(--gray);margin-top:24px}
+/* faq */
+.faq-item{border-bottom:1px solid #e4e4e4}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:22px 0;font-family:'Montserrat';font-weight:600;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;gap:20px;color:var(--graphite)}
+.faq-q .ic{color:var(--orange);font-size:24px;transition:.2s;line-height:1}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--gray);font-size:16px}
+.faq-a p{padding-bottom:22px}
+.faq-item.open .ic{transform:rotate(45deg)}
+/* contacts */
+.contacts{background:linear-gradient(160deg,#1A1A1A,#25211d);color:#fff}
+.contacts .section-title{color:#fff}
+.contacts .section-sub{color:#c9c4be}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.contact-list{list-style:none}
+.contact-list li{margin-bottom:16px;font-size:17px}
+.contact-list a:hover{color:var(--orange-h)}
+.contact-cta{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:34px;text-align:center}
+.contact-cta h3{color:#fff;font-size:24px;margin-bottom:12px}
+.contact-cta p{color:#c9c4be;margin-bottom:24px}
+/* footer */
+footer{background:#111;color:#7d7871;padding:34px 0;font-size:14px;text-align:center}
+/* responsive */
+@media(max-width:960px){
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .video-grid,.stats{grid-template-columns:1fr}
+  .split,.author-wrap,.contact-grid{grid-template-columns:1fr}
+  .avatar{width:100%;max-width:240px}
+  .hero h1{font-size:38px}
+}
+@media(max-width:640px){
+  .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid #eee}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .grid-4,.grid-3,.grid-2{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .hero{padding:80px 0 70px}
+  .hero h1{font-size:32px}
+  .section-title{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">Анти<span>хрупкость</span></div>
+    <nav class="nav-links" id="menu">
+      <a href="#about-method">Что это</a>
+      <a href="#map">Принципы</a>
+      <a href="#author">Об авторе</a>
+      <a href="#efiry">Эфиры</a>
+      <a href="#practicum">Практикум</a>
+      <a href="#reviews">Отзывы</a>
+      <a class="nav-cta" href="#order">Записаться</a>
+    </nav>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Знаете, что делать, но не делаете? Пора вернуть управление своей жизнью</h1>
+    <p class="lead">Авторская система психолога Вячеслава Козлова из 13 принципов антихрупкости. Живые онлайн-практикумы, мастер-классы и бесплатные эфиры для взрослых, которые устали ходить по кругу.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#order">Записаться на бесплатный мастер-класс</a>
+      <a class="btn-outline" href="#efiry">Смотреть бесплатные эфиры</a>
+    </div>
+    <div class="hero-meta">
+      <div><b>13</b>принципов в 3 модулях</div>
+      <div><b>6 недель</b>живой практики в группе</div>
+      <div><b>14 из 15</b>прошли первый поток до конца</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS -->
+<section id="about-method">
+  <div class="container">
+    <span class="eyebrow">Суть подхода</span>
+    <h2 class="section-title">Что такое психологическая антихрупкость</h2>
+    <p class="section-sub">Это способность не просто переживать стресс, а расти за счёт него. Не терпеть до срыва, а становиться крепче там, где раньше ломались.</p>
+    <div class="grid grid-4">
+      <div class="card"><div class="num">01</div><h3>Вернуть себе субъектность</h3><p>Понять, кто на самом деле управляет вашей жизнью: вы или обстоятельства и чужие ожидания.</p></div>
+      <div class="card"><div class="num">02</div><h3>Перестать сливать энергию</h3><p>Стыд, страх и вина годами тянут ресурс. Освободите силы для настоящего.</p></div>
+      <div class="card"><div class="num">03</div><h3>Превратить стресс в рост</h3><p>Кризис как развилка и точка развития, а не как поломка, которую нужно пережить.</p></div>
+      <div class="card"><div class="num">04</div><h3>Закрыть разрыв «знаю — не делаю»</h3><p>Дело не в лени и силе воли. Дело в системе, которую можно перестроить.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP OF PRINCIPLES -->
+<section id="map" class="alt">
+  <div class="container">
+    <span class="eyebrow">Карта антихрупкости</span>
+    <h2 class="section-title">13 принципов в трёх модулях</h2>
+    <p class="section-sub">Это и есть маршрут практикума: от возвращения к себе через присвоение опыта к раскрытию своего потенциала.</p>
+
+    <div class="module">
+      <div class="module-head"><span class="mtag">Модуль 1</span><h3>Возвращение</h3><span class="mdesc">вернуться к себе</span></div>
+      <div class="grid grid-3">
+        <div class="card"><div class="num">1</div><h3>Стань субъектом</h3><p>Перестаньте плыть по течению, верните авторство своей жизни.</p></div>
+        <div class="card"><div class="num">2</div><h3>Познай себя</h3><p>Разберитесь, что вами движет на самом деле.</p></div>
+        <div class="card"><div class="num">3</div><h3>Познавай мир</h3><p>Смотрите на реальность трезво, без иллюзий.</p></div>
+        <div class="card"><div class="num">4</div><h3>Своевременно отпускай</h3><p>Освободите энергию, застрявшую в прошлом.</p></div>
+        <div class="card"><div class="num">5</div><h3>Твори новое</h3><p>Начните действовать, а не только понимать.</p></div>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="module-head"><span class="mtag">Модуль 2</span><h3>Присвоение</h3><span class="mdesc">опереться на опыт</span></div>
+      <div class="grid grid-4">
+        <div class="card"><div class="num">6</div><h3>Будь в тонусе</h3><p>Держите ресурс тела и психики.</p></div>
+        <div class="card"><div class="num">7</div><h3>Присваивай опыт</h3><p>Превращайте прожитое в опору, а не в груз.</p></div>
+        <div class="card"><div class="num">8</div><h3>Будь в метапозиции</h3><p>Смотрите на ситуацию сверху, а не изнутри тревоги.</p></div>
+        <div class="card"><div class="num">9</div><h3>Найди свою стаю</h3><p>Окружите себя теми, кто укрепляет, а не истощает.</p></div>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="module-head"><span class="mtag">Модуль 3</span><h3>Становление</h3><span class="mdesc">раскрыть потенциал</span></div>
+      <div class="grid grid-4">
+        <div class="card"><div class="num">10</div><h3>Управляй фокусом внимания</h3><p>Вниманием управляете вы, а не лента и тревога.</p></div>
+        <div class="card"><div class="num">11</div><h3>Открой свою метаидею</h3><p>Найдите главный смысл, ради которого стоит расти.</p></div>
+        <div class="card"><div class="num">12</div><h3>Камертон и калькулятор</h3><p>Сверяйте решения и с чувствами, и с трезвым расчётом.</p></div>
+        <div class="card"><div class="num">13</div><h3>Смысл за границей жизни</h3><p>Стройте то, что больше вас самих.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section id="author">
+  <div class="container">
+    <div class="author-wrap">
+      <div class="avatar">ВК</div>
+      <div class="author-info">
+        <span class="eyebrow">Об авторе</span>
+        <h2>Вячеслав Козлов</h2>
+        <div class="author-role">Практикующий психолог, автор системы «Психологическая антихрупкость»</div>
+        <p>Вячеслав помогает взрослым людям выбираться из тупика «знаю, но не делаю» и возвращать управление своей жизнью. Разработал систему из 13 принципов антихрупкости и ведёт профессиональное сообщество психологов, исследующих эту тему. Говорит прямо, без эзотерики и обещаний лёгкого успеха.</p>
+        <div class="socials">
+          <a href="https://www.youtube.com/@vvkozlov-psiholog" target="_blank">YouTube · 8400+</a>
+          <a href="https://vk.com/v.v.kozlovofficial" target="_blank">ВКонтакте · 4400+</a>
+          <a href="https://t.me/vvkozlo" target="_blank">Telegram-канал</a>
+          <a href="https://vk.com/psyantihrup" target="_blank">Паблик «Психология Антихрупкости»</a>
+          <a href="https://vvkozlov-psiholog.com" target="_blank">Сайт</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE EFIRY -->
+<section id="efiry" class="alt">
+  <div class="container">
+    <span class="eyebrow">Бесплатно</span>
+    <h2 class="section-title">Бесплатные эфиры</h2>
+    <p class="section-sub">Не верьте на слово. Посмотрите запись и составьте своё мнение о подходе и стиле, прежде чем что-то решать.</p>
+    <div class="video-grid">
+      <div class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Эфир 1" allowfullscreen></iframe></div><div class="vc-body"><h4>Эфир 1: название</h4></div></div>
+      <div class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Эфир 2" allowfullscreen></iframe></div><div class="vc-body"><h4>Эфир 2: название</h4></div></div>
+      <div class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Эфир 3" allowfullscreen></iframe></div><div class="vc-body"><h4>Эфир 3: название</h4></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICUM -->
+<section id="practicum">
+  <div class="container">
+    <span class="eyebrow">Главная программа</span>
+    <h2 class="section-title">Практикум «Возвращение»</h2>
+    <p class="section-sub">6 недель, 12 живых онлайн-встреч по 1,5 часа. Это не лекции, а групповое исследование себя через практику, рефлексию и диалог.</p>
+    <div class="split">
+      <div>
+        <h3 style="font-size:20px;margin-bottom:8px">Для кого</h3>
+        <ul class="feature-list">
+          <li>Ходите по кругу и топчетесь на месте</li>
+          <li>Знаете, что делать, но не делаете</li>
+          <li>Хотите вернуть управление своей жизнью</li>
+        </ul>
+        <h3 style="font-size:20px;margin:22px 0 8px">Что внутри</h3>
+        <ul class="feature-list">
+          <li>12 живых встреч с разбором 5 базовых принципов</li>
+          <li>Домашние практики между встречами</li>
+          <li>Разбор реальных кейсов в группе</li>
+          <li>Закрытое сообщество участников</li>
+        </ul>
+      </div>
+      <div class="pricecard">
+        <span class="free">Первое занятие бесплатно</span>
+        <div class="meta">Старт потока: <b class="ph">[впишите дату]</b></div>
+        <div class="meta">Формат: <b>онлайн, живые встречи</b></div>
+        <div class="meta">Длительность: <b>6 недель · 12 встреч</b></div>
+        <div class="meta" style="margin-bottom:20px">Стоимость: <b class="ph">[впишите цену]</b></div>
+        <a class="btn" href="#order" style="width:100%">Записаться на практикум</a>
+        <p style="font-size:13px;color:var(--gray);margin-top:14px">Первый поток прошли до конца 14 из 15 участников.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MASTERCLASS -->
+<section id="masterclass" class="alt">
+  <div class="container">
+    <span class="eyebrow">Быстрый вход</span>
+    <h2 class="section-title">Мастер-классы по принципам</h2>
+    <p class="section-sub">Короткий насыщенный формат. За одну встречу разбираем один принцип на практике: где вы теряете опору и что с этим делать. Хороший способ попробовать подход до большого практикума.</p>
+    <div class="pricecard" style="max-width:520px">
+      <div class="meta">Ближайший мастер-класс: <b class="ph">[дата и время]</b></div>
+      <div class="meta">Формат: <b class="ph">[онлайн / запись]</b></div>
+      <div class="meta" style="margin-bottom:20px">Стоимость: <b class="ph">[цена]</b></div>
+      <a class="btn" href="#order">Оставить предзапись</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <span class="eyebrow">Результаты</span>
+    <h2 class="section-title">Что говорят участники</h2>
+    <div class="stats">
+      <div class="stat"><b>14/15</b><span>дошли до конца первого потока</span></div>
+      <div class="stat"><b>8,1/10</b><span>готовность применять материал</span></div>
+      <div class="stat"><b>90%</b><span>сказали, что ожидания оправдались</span></div>
+    </div>
+    <div class="grid grid-2">
+      <div class="review"><p>«Я понял свою цель — независимость, субъектность. Окружающие в шоке, с женой отношения улучшаются. Спасибо!»</p><div class="who">Роман Л., 45 лет<span>участник практикума</span></div></div>
+      <div class="review"><p>«Оказывается, можно спокойно доносить свою позицию, без страха и вины. Просто потому, что я имею право на свою точку зрения.»</p><div class="who">Наталья В.<span>участница первого потока</span></div></div>
+      <div class="review"><p>«Ожидал интересный вебинар, а получил настоящую учёбу. Когда появляется внутреннее принятие человека, раздражение уходит.»</p><div class="who">Алексей С.<span>участник эфиров</span></div></div>
+      <div class="review"><p>«В основе моей стойкости — уверенность и принятие себя. Это мощное основание, на котором можно строить что угодно.»</p><div class="who">Виктория С.<span>участница мастер-класса</span></div></div>
+    </div>
+    <p class="disclaimer">Имена изменены для конфиденциальности. Цитаты реальные, из формы обратной связи первого потока.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="alt">
+  <div class="container" style="max-width:820px">
+    <span class="eyebrow">Вопросы</span>
+    <h2 class="section-title">Частые вопросы</h2>
+    <div style="margin-top:20px">
+      <div class="faq-item"><button class="faq-q">Что такое психологическая антихрупкость?<span class="ic">+</span></button><div class="faq-a"><p>Это способность не просто терпеть стресс, а расти за счёт него. В основе система из 13 принципов, которые помогают становиться крепче в кризисах, а не ломаться.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Сколько длится программа?<span class="ic">+</span></button><div class="faq-a"><p>Практикум «Возвращение» идёт 6 недель: 12 живых встреч по 1,5 часа плюс домашние практики между ними.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Что включает «Возвращение»?<span class="ic">+</span></button><div class="faq-a"><p>Это групповое исследование себя через практику, рефлексию и диалог, а не лекции. Разбираем 5 базовых принципов, делаем домашние задания и разбираем кейсы в группе.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Что такое мастер-классы по отдельным принципам?<span class="ic">+</span></button><div class="faq-a"><p>Короткий формат по одному принципу за встречу. Способ познакомиться с подходом и попробовать его на практике.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Мне подойдёт, если я никогда не работал с психологом?<span class="ic">+</span></button><div class="faq-a"><p>Да. Заходить можно с бесплатного эфира или мастер-класса, чтобы спокойно понять, ваш это формат или нет.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Сколько это стоит?<span class="ic">+</span></button><div class="faq-a"><p>Стоимость практикума — <span class="ph">[впишите цену]</span>. Первое занятие бесплатное, поэтому вы ничем не рискуете на старте.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTS / ORDER -->
+<section id="order" class="contacts">
+  <div class="container">
+    <span class="eyebrow">Контакты</span>
+    <h2 class="section-title">Сделайте первый шаг</h2>
+    <p class="section-sub">Оставьте заявку, и мы свяжемся с вами, ответим на вопросы и подскажем, с чего лучше начать.</p>
+    <div class="contact-grid">
+      <div class="contact-cta">
+        <h3>Записаться</h3>
+        <p>Бесплатный мастер-класс, эфиры или практикум «Возвращение».</p>
+        <a class="btn" href="https://forms.yandex.ru/cloud/69a4655f49af4768d1a15af5" target="_blank" style="width:100%">Оставить заявку</a>
+      </div>
+      <div>
+        <ul class="contact-list">
+          <li>📞 <a href="tel:89128079999">8 (912) 80-79-999</a></li>
+          <li>✉️ <a href="mailto:vvkozlov1979@gmail.com">vvkozlov1979@gmail.com</a></li>
+          <li>✈️ <a href="https://t.me/vvkozlo" target="_blank">Telegram</a></li>
+          <li>💬 <a href="https://wa.me/79128079999" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">Психологическая антихрупкость · Вячеслав Козлов · <span id="year"></span></div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(b){
+  b.addEventListener('click',function(){
+    var item=b.parentElement;
+    var a=b.nextElementSibling;
+    var open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open');});});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
